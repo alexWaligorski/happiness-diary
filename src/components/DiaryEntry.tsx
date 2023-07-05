@@ -1,10 +1,10 @@
 import { Typography, Box } from "@mui/material";
 import Layout from "./Layout";
-import LooksOneOutlinedIcon from "@mui/icons-material/LooksOneOutlined";
-import LooksTwoOutlinedIcon from "@mui/icons-material/LooksTwoOutlined";
-import Looks3OutlinedIcon from "@mui/icons-material/Looks3Outlined";
 import LightModeRoundedIcon from "@mui/icons-material/LightModeRounded";
 import ModeNightRoundedIcon from "@mui/icons-material/ModeNightRounded";
+import TextfieldWithHeadline from "./TextfieldWithHeadline";
+import ListWithHeadline from "./ListWithHeadline";
+import { List } from "@mui/icons-material";
 
 export default function DiaryEntry({ title }: { title: string }) {
   return (
@@ -14,43 +14,20 @@ export default function DiaryEntry({ title }: { title: string }) {
           {title}
         </Typography>
         <LightModeRoundedIcon fontSize="large" htmlColor="#dfb356" />
-        <Box paddingY={4}>
-          <Typography variant="h5" sx={{ color: "#D89E4E" }}>
-            Ich bin dankbar für...
-          </Typography>
-          <ul>
-            <li>
-              <Box sx={{ display: "flex", gap: "10px" }}>
-                <LooksOneOutlinedIcon />
-                <Typography variant="body1" component="p">
-                  Erster Grund für Dankbarkeit
-                </Typography>
-              </Box>
-            </li>
-            <li>
-              <Box sx={{ display: "flex", gap: "10px" }}>
-                <LooksTwoOutlinedIcon />
-                <Typography variant="body1" component="p">
-                  Zweiter Grund für Dankbarkeit
-                </Typography>
-              </Box>
-            </li>
-            <li>
-              <Box sx={{ display: "flex", gap: "10px" }}>
-                <Looks3OutlinedIcon />
-                <Typography variant="body1" component="p">
-                  Dritter Grund für Dankbarkeit
-                </Typography>
-              </Box>
-            </li>
-          </ul>
-        </Box>
-        <Typography paddingY={2} variant="h5" sx={{ color: "#D89E4E" }}>
-          So mache ich den heutigen Tag wundervoll
-        </Typography>
-        <Typography paddingY={2} variant="h5" sx={{ color: "#D89E4E" }}>
-          Positive Selbstbekräftigung
-        </Typography>
+        <ListWithHeadline
+          title={"Ich bin dankbar für"}
+          labelOne={"Erster Grund für Dankbarkeit"}
+          labelTwo={"Zweiter Grund für Dankbarkeit"}
+          labelThree={"Dritter Grund für Dankbarkeit"}
+        />
+        <TextfieldWithHeadline
+          title={"So mache ich den heutigen Tag wundervoll"}
+          label={"Diese positiven Vorsätze habe ich für heute!"}
+        />
+        <TextfieldWithHeadline
+          title={"Positive Selbstbekräftigung"}
+          label={"So möchte ich heute oder zukünftig sein!"}
+        />
         <Box
           marginY={5}
           paddingY={3}
@@ -62,44 +39,21 @@ export default function DiaryEntry({ title }: { title: string }) {
           </Typography>
           <Typography variant={"overline"}>Blaise Pascal</Typography>
         </Box>
-        <ModeNightRoundedIcon htmlColor="#dfb356" fontSize="large" />
-        <Typography paddingY={2} variant="h5" sx={{ color: "#D89E4E" }}>
-          Was habe ich heute Gutes für jemanden getan?
-        </Typography>
-        <Typography paddingY={2} variant="h5" sx={{ color: "#D89E4E" }}>
-          Was werde ich morgen besser machen?
-        </Typography>
-        <Box paddingY={4}>
-          <Typography variant="h5" sx={{ color: "#D89E4E" }}>
-            Tolle Dinge, die ich heute erlebt habe...
-          </Typography>
-          <ul>
-            <li>
-              <Box sx={{ display: "flex", gap: "10px" }}>
-                <LooksOneOutlinedIcon />
-                <Typography variant="body1" component="p">
-                  Erstes tolles Ding
-                </Typography>
-              </Box>
-            </li>
-            <li>
-              <Box sx={{ display: "flex", gap: "10px" }}>
-                <LooksTwoOutlinedIcon />
-                <Typography variant="body1" component="p">
-                  Zweites tolles Ding
-                </Typography>
-              </Box>
-            </li>
-            <li>
-              <Box sx={{ display: "flex", gap: "10px" }}>
-                <Looks3OutlinedIcon />
-                <Typography variant="body1" component="p">
-                  Drittes tolles Ding
-                </Typography>
-              </Box>
-            </li>
-          </ul>
-        </Box>
+        <ModeNightRoundedIcon htmlColor="#77a0d2" fontSize="large" />
+        <TextfieldWithHeadline
+          title={"Was habe ich heute Gutes für jemanden getan?"}
+          label={"Kleine oder große Gesten, alles zählt!"}
+        />
+        <TextfieldWithHeadline
+          title={"Was werde ich morgen besser machen?"}
+          label={"Positive Veränderungen – jeden Tag!"}
+        />
+        <ListWithHeadline
+          title={"Tolle Dinge, die ich heute Erlebt habe..."}
+          labelOne={"Erstes Erlebnis"}
+          labelTwo={"Zweites Erlebnis"}
+          labelThree={"Drittes Erlebnis"}
+        />
       </Layout>
     </>
   );
