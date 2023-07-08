@@ -4,7 +4,6 @@ import LightModeRoundedIcon from "@mui/icons-material/LightModeRounded";
 import ModeNightRoundedIcon from "@mui/icons-material/ModeNightRounded";
 import TextfieldWithHeadline from "./TextfieldWithHeadline";
 import ListWithHeadline from "./ListWithHeadline";
-import { List } from "@mui/icons-material";
 
 export default function DiaryEntry({ title }: { title: string }) {
   return (
@@ -19,6 +18,7 @@ export default function DiaryEntry({ title }: { title: string }) {
           labelOne={"Erster Grund für Dankbarkeit"}
           labelTwo={"Zweiter Grund für Dankbarkeit"}
           labelThree={"Dritter Grund für Dankbarkeit"}
+          isEvening={false}
         />
         <TextfieldWithHeadline
           title={"So mache ich den heutigen Tag wundervoll"}
@@ -53,6 +53,7 @@ export default function DiaryEntry({ title }: { title: string }) {
           labelOne={"Erstes Erlebnis"}
           labelTwo={"Zweites Erlebnis"}
           labelThree={"Drittes Erlebnis"}
+          isEvening={true}
         />
       </Layout>
     </>

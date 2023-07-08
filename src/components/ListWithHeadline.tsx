@@ -7,11 +7,13 @@ import Looks3OutlinedIcon from "@mui/icons-material/Looks3Outlined";
 
 export default function ListWithHeadline({
   title,
+  isEvening,
   labelOne,
   labelTwo,
   labelThree,
 }: {
   title: string;
+  isEvening: boolean;
   labelOne: string;
   labelTwo: string;
   labelThree: string;
@@ -24,7 +26,9 @@ export default function ListWithHeadline({
       <ul>
         <li>
           <Box sx={{ display: "flex", gap: "10px", alignItems: "baseline" }}>
-            <LooksOneOutlinedIcon htmlColor={"#77A0D2"} />
+            <LooksOneOutlinedIcon
+              htmlColor={isEvening ? "#77A0D2" : "#D89E4E"}
+            />
             <TextField
               sx={{ width: "50%" }}
               id="standard-basic"
@@ -36,7 +40,9 @@ export default function ListWithHeadline({
         </li>
         <li>
           <Box sx={{ display: "flex", gap: "10px", alignItems: "baseline" }}>
-            <LooksTwoOutlinedIcon htmlColor={"#77A0D2"} />
+            <LooksTwoOutlinedIcon
+              htmlColor={isEvening ? "#77A0D2" : "#D89E4E"}
+            />
             <TextField
               sx={{ width: "50%" }}
               id="standard-basic"
@@ -48,7 +54,7 @@ export default function ListWithHeadline({
         </li>
         <li>
           <Box sx={{ display: "flex", gap: "10px", alignItems: "baseline" }}>
-            <Looks3OutlinedIcon htmlColor={"#77A0D2"} />
+            <Looks3OutlinedIcon htmlColor={isEvening ? "#77A0D2" : "#D89E4E"} />
             <TextField
               sx={{ width: "50%" }}
               id="standard-basic"
