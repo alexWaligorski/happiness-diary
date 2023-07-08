@@ -5,6 +5,25 @@ import ModeNightRoundedIcon from "@mui/icons-material/ModeNightRounded";
 import TextfieldWithHeadline from "./TextfieldWithHeadline";
 import ListWithHeadline from "./ListWithHeadline";
 
+/* type MorningData = {
+    thankful1: string;
+    thankful2: string;
+}
+
+interface EveningData {
+    thankful1: string;
+    thankful2: string;
+}
+
+interface MorningUI {
+    thankful1Title: string;
+    thankful2Title: string;
+}
+
+interface MorningProps extends MorningData, MorningUI {
+
+} */
+
 export default function DiaryEntry({ title }: { title: string }) {
   return (
     <>
