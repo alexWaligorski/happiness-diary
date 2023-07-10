@@ -1,9 +1,7 @@
 import { Typography, Box } from "@mui/material";
 import Layout from "./Layout";
-import LightModeRoundedIcon from "@mui/icons-material/LightModeRounded";
-import ModeNightRoundedIcon from "@mui/icons-material/ModeNightRounded";
-import TextfieldWithHeadline from "./TextfieldWithHeadline";
-import ListWithHeadline from "./ListWithHeadline";
+import EveningRoutine from "./EveningRoutine";
+import MorningRoutine from "./morningRoutine";
 
 /* type MorningData = {
     thankful1: string;
@@ -15,10 +13,6 @@ interface EveningData {
     thankful2: string;
 }
 
-interface MorningUI {
-    thankful1Title: string;
-    thankful2Title: string;
-}
 
 interface MorningProps extends MorningData, MorningUI {
 
@@ -31,21 +25,21 @@ export default function DiaryEntry({ title }: { title: string }) {
         <Typography paddingY={2} variant="h2" component="h1">
           {title}
         </Typography>
-        <LightModeRoundedIcon fontSize="large" htmlColor="#dfb356" />
-        <ListWithHeadline
-          title={"Ich bin dankbar für"}
-          labelOne={"Erster Grund für Dankbarkeit"}
-          labelTwo={"Zweiter Grund für Dankbarkeit"}
-          labelThree={"Dritter Grund für Dankbarkeit"}
+        <MorningRoutine
+          thankfulTitle="Ich bin dankbar für"
+          thankfulLabel1="Erster Grund für Dankbarkeit"
+          thankfulLabel2="Zweiter Grund für Dankbarkeit"
+          thankfulLabel3="Dritter Grund für Dankbarkeit"
+          thankfulName1="thankful1"
+          thankfulName2="thankful2"
+          thankfulName3="thankful3"
           isEvening={false}
-        />
-        <TextfieldWithHeadline
-          title={"So mache ich den heutigen Tag wundervoll"}
-          label={"Diese positiven Vorsätze habe ich für heute!"}
-        />
-        <TextfieldWithHeadline
-          title={"Positive Selbstbekräftigung"}
-          label={"So möchte ich heute oder zukünftig sein!"}
+          wonderfulDayTitle="So mache ich den heutigen Tag wundervoll"
+          wonderfulDayLabel="Diese positiven Vorsätze habe ich für heute!"
+          wonderfulDayName="wonderful"
+          positiveAffirmationTitle="Positive Selbstbekräftigung"
+          positiveAffirmationLabel="So möchte ich heute oder zukünftig sein!"
+          positiveAffirmationName="positive"
         />
         <Box
           marginY={5}
@@ -58,20 +52,20 @@ export default function DiaryEntry({ title }: { title: string }) {
           </Typography>
           <Typography variant={"overline"}>Blaise Pascal</Typography>
         </Box>
-        <ModeNightRoundedIcon htmlColor="#77a0d2" fontSize="large" />
-        <TextfieldWithHeadline
-          title={"Was habe ich heute Gutes für jemanden getan?"}
-          label={"Kleine oder große Gesten, alles zählt!"}
-        />
-        <TextfieldWithHeadline
-          title={"Was werde ich morgen besser machen?"}
-          label={"Positive Veränderungen – jeden Tag!"}
-        />
-        <ListWithHeadline
-          title={"Tolle Dinge, die ich heute Erlebt habe..."}
-          labelOne={"Erstes Erlebnis"}
-          labelTwo={"Zweites Erlebnis"}
-          labelThree={"Drittes Erlebnis"}
+        <EveningRoutine
+          kindGestureTitle="Was habe ich heute Gutes für jemanden getan?"
+          kindGestureLabel="Kleine oder große Gesten, alles zählt!"
+          kindGestureName="kindness"
+          positiveResolutionTitle="Was werde ich morgen besser machen?"
+          positiveResolutionLabel="Positive Veränderungen – jeden Tag!"
+          positiveResolutionName="change"
+          positiveExperienceTitle="Tolle Dinge, die ich heute erlebt habe..."
+          positiveExperienceLabel1="Erstes Erlebnis"
+          positiveExperienceLabel2="Zweites Erlebnis"
+          positiveExperienceLabel3="Drittes Erlebnis"
+          positiveExperienceName1="experience1"
+          positiveExperienceName2="experience2"
+          positiveExperienceName3="experience3"
           isEvening={true}
         />
       </Layout>

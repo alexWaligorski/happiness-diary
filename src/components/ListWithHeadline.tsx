@@ -8,15 +8,21 @@ import Looks3OutlinedIcon from "@mui/icons-material/Looks3Outlined";
 export default function ListWithHeadline({
   title,
   isEvening,
-  labelOne,
-  labelTwo,
-  labelThree,
+  label1,
+  label2,
+  label3,
+  name1,
+  name2,
+  name3,
 }: {
   title: string;
   isEvening: boolean;
-  labelOne: string;
-  labelTwo: string;
-  labelThree: string;
+  label1: string;
+  label2: string;
+  label3: string;
+  name1: string;
+  name2: string;
+  name3: string;
 }) {
   return (
     <Box paddingY={4}>
@@ -32,7 +38,8 @@ export default function ListWithHeadline({
             <TextField
               sx={{ width: "50%" }}
               id="standard-basic"
-              label={labelOne}
+              label={label1}
+              name={name1}
               variant="standard"
               multiline
             />
@@ -46,7 +53,8 @@ export default function ListWithHeadline({
             <TextField
               sx={{ width: "50%" }}
               id="standard-basic"
-              label={labelTwo}
+              label={label2}
+              name={name2}
               variant="standard"
               multiline
             />
@@ -58,7 +66,8 @@ export default function ListWithHeadline({
             <TextField
               sx={{ width: "50%" }}
               id="standard-basic"
-              label={labelThree}
+              label={label3}
+              name={name3}
               variant="standard"
               multiline
             />
